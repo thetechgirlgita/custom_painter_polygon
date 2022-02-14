@@ -46,10 +46,11 @@ void main (){
    void paint(Canvas canvas, Size size){
     final paint = Paint()
         ..color = Colors.pink
-        ..strokeWidth = 5
+        ..strokeWidth = 10
+        ..style = PaintingStyle.stroke
         ..strokeCap = StrokeCap.round;
 
-        final x = Offset(size.width *1/4, size.height*2/4 );
+        final x = Offset(size.width *1/4, size.height*1/4 );
         final y = Offset(size.width *3/4, size.height*3/4);
         final rect = Rect.fromPoints(x,y);
     canvas.drawRect(rect, paint);
@@ -58,8 +59,8 @@ void main (){
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-
     return false;
+
   }
 
 
